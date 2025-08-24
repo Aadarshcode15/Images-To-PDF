@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images to PDF Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="images\png" href="pdflogo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <meta name="description"
+        content="Convert your images to PDF quickly and easily with our free online tool. Supports multiple image formats and customizable PDF options.">
+    <meta name="keywords"
+        content="Image to PDF, Convert Images to PDF, Free Image to PDF Converter, Online PDF Generator, JPG to PDF, PNG to PDF, Image Compression, PDF Options">
+    <meta name="Aadarsh Patil" content="AG CREATIONS">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-heading">
+                <h1 class="main-heading">
+                    <span class="image-logo-inline">
+                        <img src="assets/image-logo.png" alt="Image Logo" class="logo-img">
+                    </span>
+                    Images to PDF Generator
+                    <span class="pdf-logo-inline">
+                        <img src="assets/pdf-logo.png" alt="PDF Logo" class="logo-img">
+                    </span>
+
+                </h1>
+            </div>
+            <div class="heading-effect"></div>
+            <p class="catchy-tagline">Turn your images into a beautiful PDF in seconds!</p>
+        </header>
+
+        <main class="main-content">
+            <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">☁️</div>
+                    <h3>Select Images</h3>
+                    <p>Drag & drop images here or click to browse</p>
+                    <input type="file" id="imageInput" multiple accept="image/*" hidden>
+                </div>
+
+                <div class="image-preview" id="imagePreview"></div>
+            </div>
+
+            <div class="options-section">
+                <h3>PDF Options</h3>
+
+                <div class="option-group">
+                    <label for="filename">Output filename:</label>
+                    <input type="text" id="filename" value="images-document" placeholder="Enter filename">
+                </div>
+
+                <div class="option-group">
+                    <label for="pageSize">Page Size:</label>
+                    <select id="pageSize">
+                        <option value="a4">A4</option>
+                        <option value="letter">Letter</option>
+                        <option value="legal">Legal</option>
+                        <option value="a3">A3</option>
+                    </select>
+                </div>
+
+                <div class="option-group">
+                    <label for="orientation">Orientation:</label>
+                    <select id="orientation">
+                        <option value="portrait">Portrait</option>
+                        <option value="landscape">Landscape</option>
+                    </select>
+                </div>
+
+                <div class="option-group">
+                    <label for="quality">Image Quality:</label>
+                    <select id="quality">
+                        <option value="0.9">High (90%)</option>
+                        <option value="0.7">Medium (70%)</option>
+                        <option value="0.5">Low (50%)</option>
+                    </select>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="fitToPage" checked>
+                    <label for="fitToPage">Fit images to page</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="maintainAspectRatio" checked>
+                    <label for="maintainAspectRatio">Maintain aspect ratio</label>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button id="generatePDF" class="btn-primary" disabled>
+                    📄 Generate PDF
+                </button>
+                <button id="clearAll" class="btn-secondary">
+                    🗑️ Clear All
+                </button>
+            </div>
+
+            <div class="progress-section" id="progressSection" style="display: none;">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p id="progressText">Processing images...</p>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>© 2025 Images to PDF Generator. Built with ❤️ for productivity.</p>
+                <div class="brand-signature">
+                    <span>🔥 </span>
+                    <span class="ag-brand"> AG CREATIONS </span>
+                    <span> 🔥</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
